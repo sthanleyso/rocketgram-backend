@@ -16,7 +16,7 @@ mongoose.connect('mongodb://localhost:27017/rocketgram', {
   useNewUrlParser: true
 });
 
-app.use((req, res) => {
+app.use((req, res, next) => {
   req.io = io;
 
   next();
