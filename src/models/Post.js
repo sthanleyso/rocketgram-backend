@@ -4,17 +4,17 @@ const PostSchema = new mongoose.Schema(
   {
     author: String,
     place: String,
-    dscription: String,
+    description: String,
     hashtags: String,
     image: String,
     likes: {
       type: Number,
-      default: 0
-    }
+      default: 0,
+    },
   },
   {
-    timestamps: true
-  }
+    timestamps: true,
+  },
 );
 
 module.exports = mongoose.model('Post', PostSchema);
